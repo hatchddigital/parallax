@@ -1,10 +1,6 @@
-/*
- * parallax
- * https://github.com/hatchddigital/parallax
- *
- * Copyright (c) 2013 Jimmy Hillis
- * Licensed under the MIT license.
- */
+/*! Parallax - v0.1.0 - 2013-01-16
+* https://github.com/hatchddigital/parallax
+* Copyright (c) 2013 Jimmy Hillis; Licensed MIT */
 
 (function($) {
 
