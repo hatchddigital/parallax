@@ -1,22 +1,103 @@
-<html>
-<head>
-    <title>Parallax Example</title>
-</head>
-<body>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7 no-js" lang="en-au"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 no-js" id="ie7" lang="en-au"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9 no-js" id="ie8" lang="en-au"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 no-js" id="ie9" lang="en-au"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en-au"> <!--<![endif]-->
 
-    <div class="parallax"></div>
+	<head>
 
-    <div class="parallax"></div>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+                <meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" />
 
-    <div class="parallax"></div>
+                <title>hatchd parallax - demo</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="../src/parallax.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            window.console.log($('.parallax'));
-            $('.parallax').parallax();
-        });
-    </script>
-</body>
+                <!-- Production style call -->
+                <link rel="stylesheet" href="css/styles.css" />
+
+                <!-- Important early load external scripts -->
+                <script src="scripts/modernizer.js"></script>
+
+	</head>
+
+	<body>
+
+		<section class="story" id="first">
+			<article>
+				<h2>section one</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</article>
+			<a href="#" onClick="scrollTo('#second');"><span class="hide">skip down</span></a>
+		</section>
+
+		<section class="story" id="second">
+			<article>
+				<h2>section one</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</article>
+			<a href="#" onClick="scrollTo('#third');"><span class="hide">skip down</span></a>
+		</section>
+
+		<section class="story" id="third">
+			<article>
+				<h2>section one</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</article>
+			<a href="#" onClick="scrollTo('#fourth');"><span class="hide">skip down</span></a>
+		</section>
+
+		<section class="story" id="fourth">
+			<article>
+				<h2>section one</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</article>
+			<a href="#" onClick="scrollTo('#fifth');"><span class="hide">skip down</span></a>
+		</section>
+
+		<section class="story" id="fifth">
+
+		</section>
+
+		<!-- JavaScript libraries and UX based code -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="scripts/jquery.1.8.3-min.js"><\/script>')</script>
+
+		<script>
+
+			$(window).load(function() {
+
+				var section_one = $('#first'),
+				section_two = $('#second'),
+				section_three = $('#third'),
+				section_four = $('#fourth'),
+				section_five = $('#fifth');
+
+				$(window).scroll(function () {
+
+					var from_top = $(document).scrollTop();
+
+					// new bg position calculated by taking distance from top (minus pixel distance depending on range from top),
+					// dividing by -3 (negative value to control upward scrolling speed), plus buffer space to avoid edging
+
+					section_one.css("background-position","50% " + ((from_top) / -3) + "px");
+					section_two.css("background-position","50% " + ((from_top - 600) / -3 + 100) + "px");
+					section_three.css("background-position","50% " + ((from_top - 1400) / -3 + 100) + "px");
+					section_four.css("background-position","50% " + ((from_top - 2600)/ -3 + 100) + "px");
+					section_five.css("background-position","50% " + ((from_top - 3600)/ -3 + 100) + "px");
+
+				});
+
+			});
+
+			function scrollTo(panel) {
+				$('body').animate({
+					scrollTop: $(panel).offset().top
+				}, 1000);
+			}
+
+		</script>
+
+	</body>
+
 </html>
