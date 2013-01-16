@@ -37,9 +37,13 @@
         // Determine default values
         return this.each(function() {
             var $this = $(this)
-              , container_offset = $this.offset().top - 500;
+              , container_offset = $this.offset().top - 500
+              , current_vertical_offset = $(document).scrollTop()
+              , new_vertical_position = (current_vertical_offset - container_offset) / (options.direction * options.speed);
             $this.data('offset', container_offset);
+            $this.css("background-position", "50% " + new_vertical_position + "px");
         });
+
 
     };
 

@@ -12,12 +12,23 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/parallax.min.js"></script>
-<script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
-</script>
+<script type="text/javascript" src="dist/parallax.min.js"></script>
+        <script type="text/javascript">
+
+            $(window).load(function () {
+                $('.story').parallax({'speed': 3});
+            });
+
+            $(document).ready(function () {
+                $('.skip-section').on('click', function (e) {
+                    e.preventDefault();
+                    $('body').animate({
+                        scrollTop: $(this).offset().top
+                    }, 1000);
+                });
+            });
+
+        </script>
 ```
 
 ## Documentation
