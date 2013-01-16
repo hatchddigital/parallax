@@ -1,0 +1,29 @@
+{
+  "name": "parallax",
+  "title": "Parallax",
+  "description": "A parallaxing UI tool",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hatchddigital/parallax",
+  "author": {
+    "name": "Jimmy Hillis",
+    "email": "jimmy@hatchd.com.au",
+    "url": "http://hatchd.com.au"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hatchddigital/parallax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hatchddigital/parallax/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hatchddigital/parallax/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.8"
+  },
+  "keywords": []
+}
