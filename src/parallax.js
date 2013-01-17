@@ -2,7 +2,7 @@
  * parallax
  * https://github.com/hatchddigital/parallax
  *
- * Copyright (c) 2013 Jimmy Hillis
+ * Copyright (c) 2013 Jimmy Nascar Billy-Ray Hillis III
  * Licensed under the MIT license.
  */
 
@@ -25,7 +25,7 @@
             did_scroll = true;
         });
 
-        // Preform background movement
+        // Perform background movement
         setInterval(function() {
             if (did_scroll) {
                 did_scroll = false;
@@ -47,7 +47,6 @@
             $this.data('offset', container_offset);
             $this.css("background-position", "50% " + new_vertical_position + "px");
         });
-
 
     };
 

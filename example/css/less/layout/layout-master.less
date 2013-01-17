@@ -10,25 +10,14 @@
 		margin:0;
 	}
 
-	header {
-		width: 1280px;
-		margin: 0 auto;
-	}
-
 	img {
 		display: block;
 		margin: 0;
 		border: 0;
 	}
 
-	#first { background: url(../images/bg1.jpg) 50% 0 no-repeat fixed #333; }
-	#second { background: url(../images/bg2.jpg) 50% 0 no-repeat fixed #333; }
-	#third { background: url(../images/bg3.jpg) 50% 0 no-repeat fixed #333; }
-	#fourth { background: url(../images/bg4.jpg) 50% 0 no-repeat fixed #333; }
-	#fifth { background: url(../images/bg5.jpg) 50% 0 no-repeat fixed #333; }
-
 	section {
-		margin: 0 auto 500px;
+		margin: 0 auto 300px;
 		position: relative;
 		a {
 			display: block;
@@ -36,22 +25,39 @@
 			height: 90px;
 			background: url(../images/down-arrow.png) center center no-repeat;
 			position: absolute;
-			bottom: -545px;
-			left: 595px;
+			bottom: -345px;
+			left: 50%;
 			z-index: 100;
+			margin-left: -45px;
+		}
+		h2 {
+			font: bold 24px georgia,serif;
+			width: 600px;
+			margin: 40px auto;
+		}
+		p {
+			font: 16px/24px georgia,serif;
+			width: 600px;
+			margin: 40px auto;
 		}
 	}
 
 	article {
-		height: 500px;
+		height: 300px;
 		width: 100%;
 		position: absolute;
-		bottom: -500px;
+		bottom: -300px;
 		float: left;
-		img {
-			height: 500px;
-		}
+		background-color: ##f2f2f2;
+		color: #494947;
+
 	}
+
+	#first 	{ background-image: url(../images/bg1.jpg); }
+	#second 	{ background-image: url(../images/bg2.jpg); }
+	#third 	{ background-image: url(../images/bg3.jpg); }
+	#fourth 	{ background-image: url(../images/bg4.jpg); }
+	#fifth 	{ background-image: url(../images/bg5.jpg); }
 
 	#fifth {
 		margin-bottom: 0;
@@ -59,10 +65,14 @@
 
 	.story {
 		height: 500px;
+		background-color: #333;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-attachment: fixed;
 		padding: 0;
 		width: 100%;
-		max-width: 1280px;
 		position: relative;
+		.background-size(100% auto);
 	}
 
 
