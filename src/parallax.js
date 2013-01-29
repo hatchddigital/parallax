@@ -2,7 +2,7 @@
  * parallax
  * https://github.com/hatchddigital/parallax
  *
- * Copyright (c) 2013 Jimmy Nascar Billy-Ray Hillis III
+ * Copyright (c) 2013 Niaal Holder, Jimmy Hillis
  * Licensed under the MIT license.
  */
 
